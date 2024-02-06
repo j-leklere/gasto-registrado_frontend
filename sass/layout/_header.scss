@@ -1,0 +1,228 @@
+.header {
+  position: sticky;
+  top: 0px;
+  height: 5.8rem;
+  padding: $spacing-1 $section-padding-pc;
+  z-index: 9999;
+  // remove when hero background is coded
+  color: #fff;
+
+  &-bg-visible {
+    background: $gradient-main;
+  }
+
+  @media (max-width: 1400px) {
+    padding: $spacing-1 $section-padding-tab;
+  }
+
+  @media (max-width: 768px) {
+    height: 4.8rem;
+  }
+
+  @media (max-width: 480px) {
+    background: $gradient-main;
+  }
+
+  /////////
+  //DESKTOP
+  /////////
+  &-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15rem;
+    // padding: 0 $spacing-3;
+
+    @media (max-width: 1400px) {
+      gap: 10rem;
+    }
+
+    @media (max-width: 1200px) {
+      gap: 5rem;
+    }
+
+    @media (max-width: 900px) {
+      gap: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+      pointer-events: none;
+    }
+
+    //LOGO
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: $spacing-1;
+      position: relative;
+      z-index: 9999;
+      height: 6.4rem;
+      height: 5.6rem;
+      text-decoration: none;
+      color: currentColor;
+
+      img {
+        object-fit: cover;
+        fill: white;
+      }
+
+      h1 {
+        font-size: $fs-heading;
+        position: relative;
+      }
+
+      &-vl {
+        width: 5px;
+        height: 100px;
+        max-height: 75%;
+        // height: 100%;
+        background-color: #444;
+      }
+
+      span {
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+      }
+    }
+
+    //NAV
+    &__items-container {
+      font-size: 1.4rem;
+      list-style: none;
+      font-weight: 500;
+
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      @media (max-width: 1200px) {
+        gap: 1rem;
+      }
+
+      @media (max-width: 1200px) {
+        gap: 0.2rem;
+      }
+    }
+
+    &__item {
+      position: relative;
+      padding: 1.5rem 1rem;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &__item:hover {
+      cursor: pointer;
+    }
+
+    &__item::after {
+      display: block;
+
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      // border-bottom: 1.5px solid transparent;
+      border-bottom: 2px solid #fff;
+      transform: scale(0);
+      transition: all 0.25s ease-out;
+    }
+
+    &__item:hover::after {
+      // border: 1.5px solid #fff;
+      transform: scale(1);
+    }
+
+    &__contact-container {
+      margin-left: auto;
+    }
+
+    &__contact {
+      display: inline-block;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 700;
+      border: 1px solid #fff;
+      border-radius: 10rem;
+      padding: 1rem 3.5rem;
+      transition: all 0.35s ease-in-out;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        border-radius: 10rem;
+        background-color: #fff;
+        transition: all 0.3s;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: $color-main;
+        border-color: $color-main;
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /////////
+  //MOBILE
+  /////////
+  .header-mobile {
+    position: sticky;
+    top: 1px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    // this should be applied to the 'Trento | Insumos médicos' logo
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: $spacing-1;
+      position: relative;
+      z-index: 9999;
+      height: 4.8rem;
+
+      h1 {
+        font-size: $fs-heading;
+        position: relative;
+      }
+      &__vl {
+        width: 5px;
+        height: 100px;
+        max-height: 75%;
+        // height: 100%;
+        background-color: #444;
+      }
+      span {
+        font-size: 1.4rem;
+      }
+    }
+
+    .mobile-nav-icon {
+      display: block;
+      position: relative;
+      z-index: 9999;
+    }
+  }
+}

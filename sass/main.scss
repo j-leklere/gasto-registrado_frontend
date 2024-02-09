@@ -7,7 +7,16 @@
 @import "./base/typography";
 
 // @import "components/";
+@import "./components/balances.module";
+@import "./components/bottomBar.module";
+@import "./components/incomes.module";
+@import "./components/mainMenu.module";
+@import "./components/middleBar.module";
+@import "./components/sidebar.module";
+@import "./components/topBar.module";
 
 // @import "layout/";
+@import "./layout/home";
+@import "./layout/board";
 
 // @import "sections/";

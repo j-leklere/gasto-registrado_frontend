@@ -1,0 +1,38 @@
+.main_navbar {
+  margin: 3.2rem 0;
+  width: 85%;
+
+  ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    .link a {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 2.8rem;
+      padding: 1rem 1.6rem;
+      margin-bottom: 1.2rem;
+      border-radius: 8px;
+      transition: all 0.3s;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #252525;
+      }
+
+      svg {
+        color: #fff;
+        width: 3rem;
+        height: 3rem;
+      }
+
+      p {
+        color: #fff;
+        font-size: 2rem;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ export default function Balances() {
   const [totalBalances, setTotalBalances] = useState(0);
   const [balances, setBalances] = useState([]);
   const [showBalance, setShowBalance] = useState(true);
+
   useEffect(() => {
     const getTotalBalances = async () => {
       try {

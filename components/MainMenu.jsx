@@ -14,37 +14,37 @@ export default function MainMenu() {
     <nav className="main_navbar">
       <ul>
         <li className="link">
-          <Link href="/board">
+          <Link href="/home">
             <FontAwesomeIcon icon={faHouse} />
             <p>Home</p>
           </Link>
         </li>
         <li className="link">
-          <Link href="/">
+          <Link href="/balances">
             <FontAwesomeIcon icon={faScaleBalanced} />
             <p>Balances</p>
           </Link>
         </li>
         <li className="link">
-          <Link href="/">
+          <Link href="/incomes">
             <FontAwesomeIcon icon={faHandHoldingDollar} />
             <p>Ingresos</p>
           </Link>
         </li>
         <li className="link">
-          <Link href="/">
+          <Link href="/expenses">
             <FontAwesomeIcon icon={faArrowTrendDown} />
             <p>Gastos</p>
           </Link>
         </li>
         <li className="link">
-          <Link href="/">
+          <Link href="/savings">
             <FontAwesomeIcon icon={faPiggyBank} />
             <p>Ahorros</p>
           </Link>
         </li>
         <li className="link">
-          <Link href="/">
+          <Link href="/adjustments">
             <FontAwesomeIcon icon={faGear} />
             <p>Ajustes</p>
           </Link>
